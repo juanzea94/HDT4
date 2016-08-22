@@ -1,1 +1,23 @@
-
+/**
+ *
+ * @author juan_
+ */
+public class NodoS<E>{
+    protected NodoS<E> next;
+    protected E value;
+    public void setNext(NodoS<E> E){
+	next = E;
+    }
+    public void setValue(E d){
+	value = d;
+    }
+    public E getValue(){
+        return value;
+    }
+    public NodoS<E> getNext(){
+	return next;
+    }
+    public NodoS(E a){
+	value = a;
+    }
+}
