@@ -67,4 +67,6 @@ public class ListaS<Double>
 	public boolean Vacio() {
             return co==0;
 	}
-	
+	public int tamaño() {
+		return co;
+	}
