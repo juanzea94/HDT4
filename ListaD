@@ -1,1 +1,74 @@
-
+/**
+ *
+ * @author juan_
+ */
+public class ListaD<Double> extends ListaA<Double>{
+	private int co;
+	private NodoD<Double> fi;
+	private NodoD<Double> ca;
+	
+	public ListaD(){
+            co = 0;
+            fi = null;
+            ca = null;	
+	}
+	public Double Ultimo1() {
+            NodoD<Double> tem = fi;
+            fi = fi.getPrevius();
+            if (fi == null){
+		ca = null;}
+            else {
+		fi.setNext(null);}
+            co --;
+            return tem.getValue();
+	}
+	public void Ultimo2(Double h) {
+            fi = new NodoD<Double> (h);
+            co ++;
+	}
+	public Double UltimoUltimo() {
+            return fi.getValue();
+	}
+        public boolean Vacio() {
+            return co==0;
+	}
+        public void Push(Double i) {
+            if(ca==null){
+		ca = new NodoD<Double>(i) ;}
+            else{
+		fi=ca;
+                fi.setPrevius(ca);
+                ca = new NodoD<Double>(i) ;
+		ca.setNext(fi);}
+            co++;
+	}
+	public boolean Tiene(Double h) {
+            int i = 0;
+            NodoD<Double> tem=ca;
+            while (i<tamaño()){
+		if (tem.value == h){
+                    return true;}
+		else{
+                    tem = (NodoD<Double>) tem.getNext();}
+                    i++;}
+                    return false;
+	}
+	
+        public int tamaño() {
+		return co;
+	}
+        /* Un problema me da el else, y el if marcandome un error extraño
+	public Double pop(){
+            if(ca=null && tamaño()=0){
+		NodoD<Double> tem;
+		tem=ca;
+		ca.setNext(null);
+		ca=fi;
+		ca.setPrevius(null);}
+            else{
+		co--;
+		return (Double) tem.getValue();
+		}
+	}
+        */
+}
