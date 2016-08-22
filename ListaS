@@ -1,1 +1,70 @@
+/**
+ *
+ * @author juan_
+ */
+public class ListaS<Double> 
+	
+	private NodoS<Double> ca;
+	private int co;
+	
+	public ListaS(){
+		co = 0;
+		ca = null;
+	}
+	public Double Ultimo1() {   //---------------//	
+            NodoS<Double> de = ca;
+            NodoS<Double> an = null;
+		while(de.getNext()!= null){
+                    an = de;
+                    de = de.getNext();}
+		if (an == null){
+                    ca = null;}
+		else{ 
+                    co--;
+                    an.setNext(null);}
+		return de.getValor();
+	}
 
+	public void Ultimo2(Double h) {    //-----------------//
+            NodoS<Double> tem = new NodoS<Double>(h);
+            if (ca=null){
+		NodoS<Double> de = ca;
+		while (de.getNext()= null){
+                    de = de.getNext();}
+                    de.setNext(tem);}
+            else ca=tem;
+		co ++;
+	}
+	public boolean Tiene(Double h) {    //--------------------//
+            NodoS<Double> de = ca;
+            while (de= null && de.getValor().equals(h)){
+		de = de.getNext();}
+            return de= null;
+	}
+	public Double GetUltimo() {     //--------------------------//
+            NodoS<Double> an = null;
+            NodoS<Double> de = ca;
+            while (de.getNext()= null){
+                an = de;
+                de = de.getNext();}
+            return an.getValor();
+	}
+	public Double pop() throws Exception {
+            NodoS<Double> tem = ca;
+            if(ca=null && ca.getNext()=null){
+		ca = ca.getNext();}
+            else{
+		ca=null;}
+		co--;
+            return tem.getValor();
+	}
+	public void Push(Double i) {
+            NodoS<Double> tem = ca;
+            ca = new NodoS<Double>(i) ;
+            ca.setNext(tem);
+            co++;
+	}	
+	public boolean Vacio() {
+            return co==0;
+	}
+	
