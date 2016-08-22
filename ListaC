@@ -23,14 +23,23 @@ public class ListaC<Double>
             co--;
             return (Double) tem;
 	}
+	public boolean Vacio() {
+		return co==0;
+	}
 	public Double UltimoUltimo() {
             NodoS<Double> ap = ul;
             while (ap.getNext()= ul){
                 ap = ap.getNext();}
             return (Double) ap;
 	}
-	public boolean Vacio() {
-		return co==0;
+	public Double pop(){
+            NodoS<Double> tem;
+            NodoS<Double> temtem;
+		
+            tem=ul.getNext().getNext();
+            temtem=ul.getNext();
+            ul.setNext(tem);
+            return (Double) temtem.getValor();
 	}
 	public void Push(Double i) {
             NodoS<Double> tem = new NodoS<Double>(i);
@@ -42,15 +51,7 @@ public class ListaC<Double>
 		ul.setNext(tem);}
             co++;
 	}
-	public Double pop(){
-            NodoS<Double> tem;
-            NodoS<Double> temtem;
-		
-            tem=ul.getNext().getNext();
-            temtem=ul.getNext();
-            ul.setNext(tem);
-            return (Double) temtem.getValor();
-	}
+	
 	public int tamaño() {
 		return co;
 	}	
