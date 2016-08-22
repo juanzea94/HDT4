@@ -1,1 +1,11 @@
-
+/**
+ *
+ * @author juan_
+ */
+public abstract class Stack<E> {
+	public Stack(){}
+	public abstract boolean Vacio();
+  public abstract int tamaño();
+	public abstract E pop();
+	public abstract void Push(E i) ;
+}
