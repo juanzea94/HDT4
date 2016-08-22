@@ -2,8 +2,7 @@
  *
  * @author juan_
  */
-public class ListaS<Double> 
-	
+public class ListaS<Double> extends TodaLista<E>
 	private NodoS<Double> ca;
 	private int co;
 	
