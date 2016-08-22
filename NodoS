@@ -1,6 +1,8 @@
 /**
  *
  * @author juan_
+ 
+ * Referencias: http://stackoverflow.com/questions/31544501/creating-a-node-class-in-java
  */
 public class NodoS<E>{
     protected NodoS<E> next;
