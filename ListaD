@@ -2,7 +2,7 @@
  *
  * @author juan_
  */
-public class ListaD<Double> extends ListaA<Double>{
+public class ListaD<Double> extends TodaLista<E>{
 	private int co;
 	private NodoD<Double> fi;
 	private NodoD<Double> ca;
