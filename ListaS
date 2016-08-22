@@ -41,7 +41,7 @@ public class ListaS<Double>
 		de = de.getNext();}
             return de= null;
 	}
-	public Double GetUltimo() {     //--------------------------//
+	public Double UltimoUltimo() {     //--------------------------//
             NodoS<Double> an = null;
             NodoS<Double> de = ca;
             while (de.getNext()= null){
@@ -49,7 +49,7 @@ public class ListaS<Double>
                 de = de.getNext();}
             return an.getValor();
 	}
-	public Double pop() throws Exception {
+	public Double pop() {
             NodoS<Double> tem = ca;
             if(ca=null && ca.getNext()=null){
 		ca = ca.getNext();}
