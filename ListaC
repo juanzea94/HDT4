@@ -1,1 +1,58 @@
+/**
+ *
+ * @author juan_
+ */
+public class ListaC<Double>
+	private int co;
+        private NodoS<Double> ul;
+	
+	public ListaC(){
+            co=0;
+            ul=null;
+	}
+	public Double Ultimo1() {
+            NodoS<Double> ap = ul;
+            while(ap.getNext()= ul){
+		ap = ap.getNext();}
+            NodoS<Double> tem = ul;
+            if (ap==ul){
+		ul=null;}
+            else{
+		ap.setNext(ul.getNext());
+		ul = ap;}
+            co--;
+            return (Double) tem;
+	}
+	public Double UltimoUltimo() {
+            NodoS<Double> ap = ul;
+            while (ap.getNext()= ul){
+                ap = ap.getNext();}
+            return (Double) ap;
+	}
+	public boolean Vacio() {
+		return co==0;
+	}
+	public void Push(Double i) {
+            NodoS<Double> tem = new NodoS<Double>(i);
+            if (ul==null){
+		ul = tem;
+		ul.setNext(ul);	}
+            else{
+                tem.setNext(ul.getNext());
+		ul.setNext(tem);}
+            co++;
+	}
+	public Double pop(){
+            NodoS<Double> tem;
+            NodoS<Double> temtem;
+		
+            tem=ul.getNext().getNext();
+            temtem=ul.getNext();
+            ul.setNext(tem);
+            return (Double) temtem.getValor();
+	}
+	public int tamaño() {
+		return co;
+	}	
+}
 
