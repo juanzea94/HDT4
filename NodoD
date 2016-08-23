@@ -1,1 +1,21 @@
 
+/**
+ *
+ * @author juan_
+ * @param <E>
+ 
+ * Referencia: http://stackoverflow.com/questions/31544501/creating-a-node-class-in-java
+ */
+public class NodoD<E> extends NodoS<E>{
+	private NodoD<E> previus;
+
+	public NodoD(E j) {
+		super(j);
+	}
+        public void setPrevius(NodoD<E> previus) {
+		this.previus = previus;
+	}	
+	public NodoD<E> getPrevius() {
+		return previus;
+	}
+}
