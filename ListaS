@@ -21,7 +21,7 @@ public class ListaS<Double> extends TodaLista<E>
 		else{ 
                     co--;
                     an.setNext(null);}
-		return de.getValor();
+		return de.getValue();
 	}
 
 	public void Ultimo2(Double h) {    //-----------------//
@@ -36,7 +36,7 @@ public class ListaS<Double> extends TodaLista<E>
 	}
 	public boolean Tiene(Double h) {    //--------------------//
             NodoS<Double> de = ca;
-            while (de= null && de.getValor().equals(h)){
+            while (de= null && de.getValue().equals(h)){
 		de = de.getNext();}
             return de= null;
 	}
@@ -46,7 +46,7 @@ public class ListaS<Double> extends TodaLista<E>
             while (de.getNext()= null){
                 an = de;
                 de = de.getNext();}
-            return an.getValor();
+            return an.getValue();
 	}
 	public Double pop() {
             NodoS<Double> tem = ca;
@@ -55,7 +55,7 @@ public class ListaS<Double> extends TodaLista<E>
             else{
 		ca=null;}
 		co--;
-            return tem.getValor();
+            return tem.getValue();
 	}
 	public void Push(Double i) {
             NodoS<Double> tem = ca;
