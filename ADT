@@ -1,1 +1,9 @@
-
+/**
+ *
+ * @author juan_
+ */
+import java.io.FileNotFoundException;
+public interface ADT<P> {
+    public void readFile(String file) throws FileNotFoundException;
+    public P calcular();
+}
