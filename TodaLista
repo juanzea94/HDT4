@@ -5,7 +5,7 @@
  */
 public abstract class TodaLista<E> extends Stack<E>{
 	public abstract E UltimoUltimo();
-  public abstract boolean Tiene(E h);
+  	public abstract boolean Tiene(E h);
 	public abstract E Ultimo1();
 	public abstract void Ultimo2(E h);	
 }
